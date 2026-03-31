@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Email-form</title>
 </head>
 <body>
-$END$
+<h1>Send Email</h1>
+
+<div th:if="${success}">
+    <p th:text="${success}"></p>
+</div>
+
+<form th:action="@{/email}" th:object="${email}" method="post">
+
+    <input th:field="*{recipient}" type="text" placeholder="Recipient..."/><br/>
+    <input th:field="*{subject}" type="text" placeholder="Subject..."/><br/>
+    <input th:field="*{message}" type="text" placeholder="Message..."/><br/>
+
+    <button type="submit">Skicka</button>
+</form>
 </body>
 </html>
