@@ -1,4 +1,5 @@
 name: Maven Build
+
 on:
   push:
     branches:
@@ -19,7 +20,10 @@ jobs:
           distribution: temurin
           java-version: '17'
           server-id: github
-          server-username: ${{ secrets.LIBRARY_USERNAME }}
-          server-password: ${{ secrets.LIBRARY_TOKEN }}
+          server-username: GITHUB_ACTOR
+          server-password: GITHUB_TOKEN
+
       - name: Bygg projektet
         run: mvn -B clean package
+        env:
+          GITHUB_TOKEN: ${{ secrets.LIBRARY_TOKEN }}
