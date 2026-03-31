@@ -76,6 +76,13 @@
         </dependency>
     </dependencies>
 
+    <repositories>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/birkegard/my-textformatter</url>
+        </repository>
+    </repositories>
+
     <build>
         <plugins>
             <plugin>
