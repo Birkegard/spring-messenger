@@ -18,10 +18,13 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: '17'
+          java-version: '21'
           server-id: github
           server-username: GITHUB_ACTOR
           server-password: GITHUB_TOKEN
+
+      - name: Rensa Maven cache
+        run: rm -rf ~/.m2/repository/se/iths/christoffer/my-textformatter
 
       - name: Bygg projektet
         run: mvn -B clean package
