@@ -10,7 +10,7 @@
     </parent>
     <groupId>se.iths.christoffer</groupId>
     <artifactId>spring-messenger</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <name>spring-messenger</name>
     <description>spring-messenger</description>
     <url/>
@@ -70,23 +70,11 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>se.iths.christoffer</groupId>
-            <artifactId>my-textformatter</artifactId>
-            <version>2.0.0</version>
-        </dependency>
-        <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>6.2.5</version>
         </dependency>
     </dependencies>
-
-    <repositories>
-        <repository>
-            <id>github</id>
-            <url>https://maven.pkg.github.com/birkegard/my-textformatter</url>
-        </repository>
-    </repositories>
 
     <build>
         <plugins>
