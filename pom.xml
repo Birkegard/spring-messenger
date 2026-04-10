@@ -104,4 +104,10 @@
             </plugin>
         </plugins>
     </build>
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/birkegard/spring-messenger</url>
+        </repository>
+    </distributionManagement>
 </project>

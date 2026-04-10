@@ -30,3 +30,8 @@ jobs:
         run: mvn -B clean package
         env:
           GITHUB_TOKEN: ${{ secrets.LIBRARY_TOKEN }}
+
+      - name: Publicera till GitHub Packages
+        run: mvn deploy -DskipTests
+        env:
+          GITHUB_TOKEN: ${{ secrets.LIBRARY_TOKEN }}
