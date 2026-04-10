@@ -6,13 +6,12 @@ import jakarta.mail.Session;
 import jakarta.mail.Transport;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
-import org.springframework.stereotype.Component;
 import se.iths.christoffer.springmessenger.model.Email;
 import se.iths.christoffer.springmessenger.model.Message;
 
 import java.util.Properties;
 
-@Component("email")
+
 public class EmailSender implements Messenger {
     private static final String FROM = "birkegard19@gmail.com";
     private static final String APP_PASSWORD = "mzib qqhm zrds sbfq";
