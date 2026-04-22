@@ -13,8 +13,8 @@ import java.util.Properties;
 
 
 public class EmailSender implements Messenger {
-    private static final String FROM = "birkegard19@gmail.com";
-    private static final String APP_PASSWORD = "mzib qqhm zrds sbfq";
+    private static final String FROM = System.getenv("MAIL_ACCOUNT");
+    private static final String APP_PASSWORD = System.getenv("MAIL_PASSWORD");
 
     @Override
     public void send(Message message) {
